@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmation Popup</title>
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Pop-up Container -->
     <div class="popup-container" id="popupContainer">
         <div class="popup">
             <h2>Thank You For Confirming!</h2>
@@ -17,29 +15,24 @@
         </div>
     </div>
 
-    <!-- Loading Screen -->
     <div class="loading-container" id="loadingContainer">
         <div class="spinner"></div>
     </div>
 
     <script>
-        // Show popup after 2 seconds, hiding the loading screen first
 setTimeout(() => {
     const loadingContainer = document.getElementById('loadingContainer');
     const popupContainer = document.getElementById('popupContainer');
 
-    // Hide the loading container
     loadingContainer.style.opacity = '0';
     setTimeout(() => {
-        loadingContainer.style.display = 'none'; // Completely removes the spinner
+        loadingContainer.style.display = 'none'; 
     }, 500);
 
-    // Show the confirmation popup
     popupContainer.style.visibility = 'visible';
     popupContainer.style.opacity = '1';
 }, 2000);
 
-// Close popup function
 function closePopup() {
     document.getElementById('popupContainer').style.opacity = '0';
     setTimeout(() => {
